@@ -1,5 +1,5 @@
 # Logdetector
 
 
-curl -sSL https://raw.githubusercontent.com/farooq-001/SYSTEM-SETUP/master/ec2-sysprep.sh | bash
+curl -sSL https://github.com/farooq-001/Logdetector/blob/master/setup.sh | bash
 

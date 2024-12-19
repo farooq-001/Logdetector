@@ -13,9 +13,12 @@ tar -zxvf /opt/snb-tech/Logdetector/logstash-8.9.0.tar.gz -C /opt/snb-tech/Logde
 ln -s /opt/snb-tech/Logdetector/nexus /opt/nexus
 ln -s /opt/snb-tech/Logdetector/logstash-8.9.0 /opt/collector
 
+# creat sample service file
+cp -r /opt/nexus/snb_windows.service  /etc/systemd/system
+
 # Create the .install directory and move the tar.gz files there
 mkdir -p /opt/snb-tech/Logdetector/.install
-mv /opt/snb-tech/Logdetector/packages-elk/nexus.tar.gz   /opt/snb-tech/Logdetector/logstash-8.9.0.tar.gz /opt/snb-tech/Logdetector/.install
+mv /opt/snb-tech/Logdetector/nexus.tar.gz   /opt/snb-tech/Logdetector/logstash-8.9.0.tar.gz /opt/snb-tech/Logdetector/.install
 
 
 # End of script

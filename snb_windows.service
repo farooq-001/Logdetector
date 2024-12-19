@@ -1,0 +1,19 @@
+[Unit]
+Description=Windows Collector
+After=network.target
+
+[Service]
+
+EnvironmentFile=/opt/snb-tech/Logdetector/nexus/conf/collector.conf
+Type=simple
+WorkingDirectory=/opt/nexus
+
+ExecStart=/opt/collector/bin/logstash --path.settings /opt/snb-tech/Logdetector/nexus/conf/collector/windows
+
+RemainAfterExit=no
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy = multi-user.target                                    
+
